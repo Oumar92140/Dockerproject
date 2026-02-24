@@ -26,11 +26,17 @@ docker compose down puis docker compose up -d db
 
 La ligne est toujours présente → les données persistent via db_data.
 
-Commandes de test (à mettre aussi dans la doc)
+Commandes de test 
 docker compose up -d db
+
 docker exec -it app_db mariadb -uappuser -papppass appdb -e "SHOW TABLES;"
+
 docker exec -it app_db mariadb -uappuser -papppass appdb -e "SELECT * FROM messages;"
+
 docker exec -it app_db mariadb -uappuser -papppass appdb -e "INSERT INTO messages(author,content) VALUES ('Test','Persistance OK');"
+
 docker compose down
+
 docker compose up -d db
+
 docker exec -it app_db mariadb -uappuser -papppass appdb -e "SELECT * FROM messages;"
