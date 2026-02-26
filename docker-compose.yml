@@ -3,7 +3,7 @@ services:
     build: ./frontend 
     container_name: app_frontend
     ports:
-      - "8080:80"
+      - "8080:3000"
     depends_on:
       - backend
     networks:
