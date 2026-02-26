@@ -8,7 +8,7 @@ export default function MessageForm() {
     e.preventDefault();
     const formData = new FormData(e.target);
     
-    await fetch('http://localhost:3000/api/messages', 
+    await fetch('http://localhost:3000/api/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -23,10 +23,10 @@ export default function MessageForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 sticky top-6">
-      <div class="space-y-4">
-        <input name="author" placeholder="Pseudo" required class="w-full bg-slate-50 border-none p-4 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" />
-        <textarea name="content" placeholder="Message..." required class="w-full bg-slate-50 border-none p-4 rounded-xl h-32 focus:ring-2 focus:ring-blue-500 outline-none" />
-        <button type="submit" class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-blue-600 transition-all duration-300 shadow-lg">
+      <div className="space-y-4">
+        <input name="author" placeholder="Pseudo" required className="w-full bg-slate-50 border-none p-4 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" />
+        <textarea name="content" placeholder="Message..." required className="w-full bg-slate-50 border-none p-4 rounded-xl h-32 focus:ring-2 focus:ring-blue-500 outline-none" />
+        <button type="submit" className="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-blue-600 transition-all duration-300 shadow-lg">
           PUBLIER
         </button>
       </div>
