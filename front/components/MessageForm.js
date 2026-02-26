@@ -22,7 +22,7 @@ export default function MessageForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 sticky top-6">
+    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 sticky top-6">
       <div class="space-y-4">
         <input name="author" placeholder="Pseudo" required class="w-full bg-slate-50 border-none p-4 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" />
         <textarea name="content" placeholder="Message..." required class="w-full bg-slate-50 border-none p-4 rounded-xl h-32 focus:ring-2 focus:ring-blue-500 outline-none" />
@@ -34,3 +34,4 @@ export default function MessageForm() {
   );
 
 }
+
