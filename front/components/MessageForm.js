@@ -8,7 +8,7 @@ export default function MessageForm() {
     e.preventDefault();
     const formData = new FormData(e.target);
     
-    await fetch('http://localhost:3000/messages', { // Ici localhost car appelé par le navigateur
+    await fetch('http://localhost:3000/api/messages', 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -18,7 +18,7 @@ export default function MessageForm() {
     });
 
     e.target.reset();
-    router.refresh(); // Rafraîchit les données du serveur sans recharger la page
+    router.refresh(); 
   }
 
   return (
@@ -32,4 +32,5 @@ export default function MessageForm() {
       </div>
     </form>
   );
+
 }
