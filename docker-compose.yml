@@ -18,7 +18,8 @@ services:
       DB_USER: ${DB_USER}
       DB_PASS: ${DB_PASS}
     depends_on:
-      - db 
+      db:
+        condition: service_healthy 
     ports:
       - "3000:3000"
     networks:
@@ -38,6 +39,12 @@ services:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro 
     networks:
       - private_net 
+    
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "127.0.0.1", "-u${DB_USER}", "-p${DB_PASS}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
 
 volumes:
   db_data:
