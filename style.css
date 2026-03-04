@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap');
+
+body {
+    background:#1a1a1a;
+    font-family:'Lora',serif;
+    color:#4e342e;
+    padding:20px;
+}
+
+.container {
+    background:#f4ece1;
+    border-left:10px solid #3e2723;
+    padding:30px;
+    max-width:800px;
+    margin:40px auto;
+}
+
+h1 {
+    font-family:'Playfair Display',serif;
+    color:#8c6d1f;
+    border-bottom:2px solid #d4af37;
+}
+
+.message-card {
+    background:#fff;
+    border:1px solid #dcdcdc;
+    border-left:4px solid #d4af37;
+    margin-bottom:20px;
+    padding:15px;
+}
+
+.form-control {
+    background:#fdfbf7;
+    border:1px solid #d7ccc8;
+    border-radius:0;
+}
+
+.form-control:focus {
+    border-color:#d4af37;
+    box-shadow:none;
+    outline:none;
+}
+
+.btn-primary {
+    background:#3e2723;
+    border:1px solid #d4af37;
+    color:#d4af37;
+    border-radius:0;
+    width:100%;
+    padding:10px;
+    font-weight:bold;
+}
+
+.btn-primary:hover {
+    background:#d4af37;
+    color:#3e2723;
+}
+
+.text-muted {
+    color:#8d6e63!important;
+    font-size:.9em;
+}
